@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      window.onload = randNumber;
+      function randNumber() {
+        var loveNumber = Math.random() * 100;
+        loveNumber = Math.floor(loveNumber) + 1;
+        document.getElementById("lovenumber").innerHTML = loveNumber + " %";
+
+        if (loveNumber < 30) {
+          document.getElementById("calcDesc").innerHTML =
+            "We thinks a relationship might work out between you, but the chance is very small. A successful relationship is possible, but you both have to work on it. Do not sit back and think that it will all work out fine, because it might not be working out the way you wanted it to. Spend as much time with each other as possible. Again, the chance of this relationship working out is very small, so even when you do work hard on it, it still might not work out.";
+        } else if (loveNumber >= 30 && loveNumber < 75) {
+          document.getElementById("calcDesc").innerHTML =
+            "The chance of a relationship working out is not very big, but a relationship is very well possible, if the two of you really want it to, and are prepared to make some sacrifices for it. You'll have to spend a lot of quality time together. You must be aware of the fact that this relationship might not work out at all, no matter how much time you invest in it.";
+        } else if (loveNumber >= 75) {
+          document.getElementById("calcDesc").innerHTML =
+            "We thinks that a relationship between you both has a very good chance of being successful, but this doesn't mean that you don't have to work on the relationship. Remember that every relationship needs spending time together, talking with each other etc.";
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color: #f9f9f9">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <span
+          class="navbar-brand mb-0 h1"
+          style="
+            font-family: 'Playball', cursive;
+            font-size: 2rem;
+            color: rgb(213, 0, 0);
+          "
+          >The Love Calculator.</span
+        >
+      </div>
+    </nav>
+
+    <div
+      class="container-fluid d-flex justify-content-center mt-5 position-relative"
+    >
+      <img src="./images/download.svg" width="15%" class="img-fluid" alt="" />
+      <p
+        id="lovenumber"
+        class="text-light text-center fs-2 font-family: 'Kalam', cursive; position-absolute"
+        style="top: 30%"
+      ></p>
+    </div>
+
+    <div class="container mt-5">
+      <div class="description">
+        <p
+          style="font-size: 1.15rem; font-family: 'Edu TAS Beginner', cursive"
+          class="text-center"
+          id="calcDesc"
+        ></p>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <footer class="text-center text-white" style="background-color: #f1f1f1">
+        <!-- Grid container -->
+        <div class="container-fluid pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.linkedin.com/in/arafath-c-t-k-1b4149214/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://github.com/Arafath-CTK"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.instagram.com/_arafu/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center text-dark p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          ©2023 All rights reserved
+          <a class="text-dark"></a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+    <!-- End of .container -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

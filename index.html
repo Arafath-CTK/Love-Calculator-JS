@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body style="background-color: #f9f9f9">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <span
+          class="navbar-brand mb-0 h1"
+          style="
+            font-family: 'Playball', cursive;
+            font-size: 2rem;
+            color: rgb(213, 0, 0);
+          "
+          >The Love Calculator.</span
+        >
+      </div>
+    </nav>
+
+    <div class="container text-start pt-3 pb-0">
+      <h1
+        class="row justify-content-center pt-5"
+        style="font-family: 'Kalam', cursive; font-size: 1.9rem"
+      >
+        Welcome To Love Calculator!
+      </h1>
+      <p style="font-size: 1.15rem; font-family: 'Edu TAS Beginner', cursive">
+        We all know that a name can tell a lot about a person. Names are not
+        randomly chosen, they all have a meaning. We knew this so we made
+        another great invention just for the lonely you!
+        <br /><br />
+        Sometimes you'd like to know if a relationship with someone could work
+        out. Therefore we designed this great machine for you. With The Love
+        Calculator you can calculate the probability of a successful
+        relationship between two people. The Love Calculator is an affective way
+        to get an impression of what the chances are on a relationship between
+        two people.
+        <br /><br />
+        To find out what the chances for you and your dream partner are, just
+        fill in both full names (both first and last name) in the two text boxes
+        below, and press Calculate.
+      </p>
+    </div>
+
+    <form id="loveform">
+      <div
+        class="container mt-5"
+        style="font-family: 'Edu TAS Beginner', cursive"
+      >
+        <div class="container">
+          <div class="row justify-content-center mx-5">
+            <div
+              class="col-md-6 col-12 mt-5 mt-md-0 row justify-content-center position-relative"
+            >
+              <label for="your name" class="row justify-content-center fs-5"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="yname"
+                class="form-control text-center w-50 h-100 shadow rounded-5"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div
+              class="col-md-6 col-12 mt-5 mt-md-0 row justify-content-center"
+            >
+              <label for="crush name" class="row justify-content-center fs-5"
+                >Your Crush</label
+              >
+              <input
+                type="text"
+                id="cname"
+                class="form-control text-center w-50 h-100 shadow rounded-5"
+                placeholder="Full name"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <p
+              id="yname-error"
+              class="text-center position-absolute pt-4 pt-md-4"
+              style="color: red; font-size: 1rem; display: none"
+            >
+              Invalid name format
+            </p>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <p
+              id="cname-error"
+              class="text-center position-absolute pt-4 pt-md-4"
+              style="color: red; font-size: 1rem; display: none"
+            >
+              Invalid name format
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mx-5">
+          <div class="submitbutton ms-md-4 me-md-4 row justify-content-center">
+            <button
+              type="button"
+              id="btn"
+              class="btn mt-5 w-75 h-75 shadow rounded-5"
+              onclick="calcSubmit()"
+              style="
+                font-size: 1.5rem;
+                color: white;
+                background-color: rgb(213, 0, 0);
+              "
+              hr
+            >
+              Calculate Love
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="container-fluid mt-5">
+      <footer class="text-center text-white" style="background-color: #f1f1f1">
+        <!-- Grid container -->
+        <div class="container-fluid pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.linkedin.com/in/arafath-c-t-k-1b4149214/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://github.com/Arafath-CTK"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.instagram.com/_arafu/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center text-dark p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          ©2023 All rights reserved
+          <a class="text-dark"></a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+    <!-- End of .container -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./lc.js"></script>
+  </body>
+</html>
