@@ -1,4 +1,4 @@
-function calcSubmit(event) {
+function calcSubmit() {
   var yNameInput = document.getElementById("yname");
   var cNameInput = document.getElementById("cname");
 
@@ -21,8 +21,16 @@ function calcSubmit(event) {
   }
 
   if (isValidYName && isValidCName) {
-    setTimeout(function () {
-      window.location = "./calculation.html";
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbw3LyA2UG5QMduk5pBN9_HmzetblDKcw8sINcmJhqovINOdN0jndRhozr_uZoqN_vP1XA/exec",
+      data: $("#loveform").serialize(),
+      method: "post",
+      success: function (response) {
+        window.location = "./calculation.html";
+      },
+      error: function (err) {
+        alert("Something went wrong");
+      },
     });
   }
   document.getElementById("yname").value = "";
