@@ -40,7 +40,7 @@
       function randNumber() {
         var loveNumber = Math.random() * 100;
         loveNumber = Math.floor(loveNumber) + 1;
-        document.getElementById("lovenumber").innerHTML = loveNumber + " %";
+        document.getElementById("lovenumber").innerHTML = loveNumber + "%";
 
         if (loveNumber < 30) {
           document.getElementById("calcDesc").innerHTML =
@@ -73,11 +73,16 @@
     <div
       class="container-fluid d-flex justify-content-center mt-5 position-relative"
     >
-      <img src="./images/download.svg" width="15%" class="img-fluid" alt="" />
+      <img
+        id="loveimg"
+        src="./images/download.svg"
+        class="img-fluid"
+        style="width: 20%"
+      />
       <p
         id="lovenumber"
-        class="text-light text-center fs-2 font-family: 'Kalam', cursive; position-absolute"
-        style="top: 30%"
+        class="text-light text-center fs-2 font-family: 'Kalam', cursive; position-absolute top-50 start-50 translate-middle"
+        style="transform: translate(-50%, -50%)"
       ></p>
     </div>
 
@@ -106,6 +111,7 @@
             font-size: 1.5rem;
             color: white;
             background-color: rgb(213, 0, 0);
+            padding: 0 25px 0 25px;
           "
           hr
         >
