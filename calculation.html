@@ -160,11 +160,12 @@
         // Get love percentage from the URL
         var lovePercentage = getParameterByName("lovePercentage");
 
-        document.getElementById("lovePercentage").innerHTML = lovePercentage + "%";
+        document.getElementById("lovePercentage").innerHTML =
+          lovePercentage + "%";
 
         if (lovePercentage < 30) {
           document.getElementById("calcDesc").innerHTML =
-            "We thinks a relationship might work out between you, but the chance is very small. A successful relationship is possible, but you both have to work on it. Do not sit back and think that it will all work out fine, because it might not be working out the way you wanted it to. Spend as much time with each other as possible. Again, the chance of this relationship working out is very small, so even when you do work hard on it, it still might not work out.";
+            "We thinks a relationship might work out between you both, but the chance is very small. A successful relationship is possible, but you both have to work on it. Do not sit back and think that it will all work out fine, because it might not be working out the way you wanted it to. Spend as much time with each other as possible. Again, the chance of this relationship working out is very small, so even when you do work hard on it, it still might not work out.";
         } else if (lovePercentage >= 30 && lovePercentage < 75) {
           document.getElementById("calcDesc").innerHTML =
             "The chance of a relationship working out is not very big, but a relationship is very well possible, if the two of you really want it to, and are prepared to make some sacrifices for it. You'll have to spend a lot of quality time together. You must be aware of the fact that this relationship might not work out at all, no matter how much time you invest in it.";
