@@ -21,15 +21,16 @@ function calcSubmit() {
   }
 
   if (isValidYName && isValidCName) {
+    calculateLove();
     $.ajax({
       url: "https://script.google.com/macros/s/AKfycbw3LyA2UG5QMduk5pBN9_HmzetblDKcw8sINcmJhqovINOdN0jndRhozr_uZoqN_vP1XA/exec",
       data: $("#loveform").serialize(),
       method: "post",
       success: function (response) {
-        calculateLove();
+        console.log("Submitted successfully");
       },
       error: function (err) {
-        alert("Something went wrong");
+        console.error("Something went wrong", err);
       },
     });
   }
